@@ -1,0 +1,24 @@
+project_name:
+  type: str
+  help: What is the name of the your project?
+  default: my-python-package
+
+project_slug:
+  type: str
+  help: What is the package import name (snake_case)?
+  default: "{{ project_name | lower | replace('-', '_') }}"
+
+project_description:
+  type: str
+  help: A short description of your project.
+  default: A modern Python package managed with uv and ruff.
+
+author_name:
+  type: str
+  help: Author's full name.
+  default: Your Name
+
+python_version:
+  type: str
+  help: Target Python version.
+  default: "3.14"

@@ -1,0 +1,67 @@
+[project]
+name = "{{ project_slug }}"
+version = "0.1.0"
+description = "{{ project_description }}"
+requires-python = ">={{ python_version }}"
+
+[dependency-groups]
+dev = [
+    "basedpyright>=1.39.8",
+    "pytest>=9.1.1",
+    "ruff>=0.15.18",
+]
+
+[tool.ruff]
+line-length = 99
+target-version = "py{{ python_version | replace('.', '') }}"
+indent-width = 4
+
+[tool.ruff.lint]
+select = [
+  "E",   # pycodestyle errors
+  "F",   # pyflakes (undefined names, unused imports)
+  "W",   # pycode style warnings
+  "I",   # isort (import grouping/sorting)
+  "N",   # pep8-naming
+  "D",   # pydocstyle
+  "UP",  # pyupgrade
+  "B",   # bugbear
+  "A",   # builtins shadowing
+  "C4",  # comprehensions
+  "SIM", # simplify
+  "ANN", # type annotations
+  "RET", # return statememts consistency
+  "ARG", # unused arguments
+]
+
+ignore = [
+  "D100", # missing dosctring in public module
+  "D104", # missing docstring in public package
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.isort]
+known-first-party = ["{{ project_slug }}"]
+force-sort-within-sections = true
+combine-as-imports = true
+split-on-trailing-comma = true
+
+[tool.ruff.lint.pep8-naming]
+classmethod-decorators = ["classmethod"]
+
+[tool.ruff.format]
+indent-style = "space"
+quote-style = "double"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+docstring-code-format = true
+
+[tool.basedpyright]
+typeCheckingMode = "strict"
+pythonVersion = "{{ python_version }}"
+include = ["src"]
+exclude = ["**/__pycache__"]
+reportMissingTypeStubs = false
+useLibraryCodeForTypes = true

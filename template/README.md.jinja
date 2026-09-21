@@ -1,0 +1,22 @@
+# {{ project_name }}
+
+{{ project_description }}
+
+## Development Workflow
+
+This project uses:
+- [uv](https://docs.astral.sh/uv/) for dependency management
+- [Ruff](https://docs.astral.sh/ruff/) for linting/formatting
+- [basedpyright](https://docs.basedpyright.com/latest/) for strict type checking
+- [pytest](https://docs.pytest.org/en/stable/) for testing
+- [Justfiles](https://github.com/casey/just) to run various commands
+
+### Setup
+To get started, and using this project, run
+```bash
+copier copy path/to/project/template path/to/destination
+```
+Then,
+   ```bash
+   uv sync --dev
+   ```
