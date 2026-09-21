@@ -13,11 +13,6 @@ project_description:
   help: A short description of your project.
   default: A modern Python package managed with uv and ruff.
 
-author_name:
-  type: str
-  help: Author's full name.
-  default: Your Name
-
 python_version:
   type: str
   help: Target Python version.
