@@ -14,3 +14,19 @@ copier copy "https://github.com/NicoloMarsucco/python-template.git" path/to/dest
 ```bash
 copier update
 ```
+
+## How to update the tag
+
+1. To see the most recent tag, run:
+```bash
+git describe --tags --exact-match
+```
+or
+```bash
+git describe --tags
+```
+2. To create a new tag, run
+```bash
+git tag v1.1.0
+git push --tags
+```
