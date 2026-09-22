@@ -8,7 +8,7 @@ You are welcome to use it if you want.
 1. Install [copier](https://copier.readthedocs.io/en/stable/)
 2. To generate a project using this template, run
 ```bash
-copier copy "https://github.com/NicoloMarsucco/python-template.git" path/to/destination
+copier copy --vcs-ref HEAD "https://github.com/NicoloMarsucco/python-template.git" path/to/destination
 ```
 3. To update the project, run
 ```bash
