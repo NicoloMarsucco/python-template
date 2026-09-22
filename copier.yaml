@@ -1,7 +1,7 @@
 project_slug:
   type: str
   help: What is the package import name (snake_case)?
-  default: my-python-package
+  default: snake_case_slug
 
 project_description:
   type: str
