@@ -17,3 +17,6 @@ python_version:
   type: str
   help: Target Python version.
   default: "3.13"
+
+_exclude:
+  README.md
